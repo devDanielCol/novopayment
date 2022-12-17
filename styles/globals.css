@@ -14,30 +14,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.swiper-button-prev {
-  background-color: rgba(0, 0, 0, 0.114);
-  width: 70px !important;
-  height: 70px !important;
-  border-radius: 50%;
-  color: rgb(141, 141, 141) !important;
-  transform: scale(0.7);
-}
-
-.swiper-button-prev::after {
-  transform: scale(0.7);
-  font-weight: 900;
-}
-
-.swiper-button-next {
-  background-color: rgba(0, 0, 0, 0.114);
-  width: 70px !important;
-  height: 70px !important;
-  border-radius: 50%;
-  color: rgb(141, 141, 141) !important;
-  transform: scale(0.7);
-}
-
-.swiper-button-next::after {
-  transform: scale(0.7);
-  font-weight: 900;
+a {
+  text-decoration: none;
+  color: inherit;
 }

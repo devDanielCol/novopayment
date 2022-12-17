@@ -1,3 +1,5 @@
+import BaseTheme from "./baseTheme";
+
 const darkThemeOption = {
   palette: {
     mode: "dark",
@@ -36,9 +38,7 @@ const darkThemeOption = {
     },
     custom: {
       navbar: "#000000",
-      text: "#fff",
-      callaction: "#fff",
-      section1: "#0b0513",
+      footer: "#1500a1",
     },
   },
 

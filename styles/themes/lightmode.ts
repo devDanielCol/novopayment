@@ -1,8 +1,10 @@
+import { blue } from "@mui/material/colors";
+
 const lightThemeOption = {
   palette: {
     mode: "light",
     primary: {
-      main: "#ff4d4d",
+      main: blue["A700"],
       dark: "#ff4d4d",
       light: "#f9cb28",
     },
@@ -20,7 +22,7 @@ const lightThemeOption = {
       dark: "#FF7A00",
     },
     success: {
-      main: "#B3DCEA",
+      main: "#347d39",
       dark: "#0FD960",
     },
     common: {
@@ -35,11 +37,8 @@ const lightThemeOption = {
       paper: "#ffffff",
     },
     custom: {
-      navbar: "#ffffff",
-      text: "#000",
-      callaction: "#000",
-      section1: "#c294ff",
-      footer: "#f5f5f7",
+      navbar: "#1500a1",
+      footer: "#1500a1",
     },
   },
   typography: {
@@ -92,8 +91,9 @@ const lightThemeOption = {
           backdropFilter: "blur(3px)",
         },
         paper: {
-          backgroundColor: "#000",
+          backgroundColor: "#fff",
           backgroundImage: "none",
+          borderRadius: "12px",
         },
       },
     },

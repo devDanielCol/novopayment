@@ -1,5 +1,5 @@
 {
-  "name": "peniel-app",
+  "name": "novopayment-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,9 +24,7 @@
     "react-redux": "^8.0.5",
     "react-tsparticles": "^2.6.0",
     "styled-components": "^5.3.6",
-    "swiper": "^8.4.4",
-    "tsparticles": "^2.6.0",
-    "tsparticles-slim": "^2.6.0"
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",

@@ -1,4 +1,4 @@
-import { IThemeModes } from "./themes";
+import { IThemeModes } from "./theme";
 
 export interface IThemeControls {
   theme: IThemeModes;

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IThemeControls } from "../../types/reducers";
-import { IThemeModes } from "../../types/themes";
+import { IThemeModes } from "../../types/theme";
 import {
   getLocalStorage,
   setLocalStorage,
@@ -16,10 +16,10 @@ export const controllerTheme = createSlice({
   reducers: {
     changeTheme: (state, action: PayloadAction<IThemeModes>) => {
       state.theme = action.payload;
-      setLocalStorage("mode", state.theme);
+      setLocalStorage("theme", state.theme);
     },
     setCurrentTheme(state) {
-      const storage = getLocalStorage<IThemeModes>("mode");
+      const storage = getLocalStorage<IThemeModes>("theme");
       state.theme = storage ? storage : initialState.theme;
     },
   },
