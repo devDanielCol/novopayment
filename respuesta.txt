@@ -86,3 +86,9 @@ Si la explicacion tal vez no fue tan clara, puedes mirar los comentarios que dej
 
 Espero les halla gustado mi solución, muchas gracias me parecio muy interesante el ejercicio.
 Muchas gracias, quedo muy atento
+
+
+Para correr el proyecto en local
+
+yarn install
+yarn dev
