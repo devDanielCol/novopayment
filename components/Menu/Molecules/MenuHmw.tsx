@@ -1,6 +1,5 @@
 import { Popover, Box } from "@mui/material";
-import useTheme from "../../../util/hooks/useTheme";
-import ThemeButton from "../../ThemeProvider/ThemeBtn/ThemeBtn";
+import SignOut from "../../Navbar/Primary/NavbarDeskop/Atoms/SignOut/Molecules/SignOut";
 
 interface IMenuHmwProps {
   open: boolean;
@@ -9,8 +8,6 @@ interface IMenuHmwProps {
 }
 
 const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
-  const theme = useTheme();
-
   return (
     <Popover
       anchorEl={anchorEl}
@@ -41,7 +38,7 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
             xs: "90vw",
             md: "60vw",
           },
-          minHeight: 500,
+          minHeight: 100,
           borderRadius: 3,
           p: 4,
           display: "flex",
@@ -49,25 +46,8 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ width: "100%", minHeight: 400 }}></Box>
-        <Box
-          sx={{
-            mt: 2,
-            height: "fit-content",
-            borderRadius: 2.5,
-            p: 0.1,
-          }}
-        >
-          <Box
-            sx={{
-              borderRadius: 2.5,
-              p: 2,
-              textAlign: "center",
-              backgroundColor: theme.palette.background.paper,
-            }}
-          >
-            <ThemeButton />
-          </Box>
+        <Box sx={{ width: "100%", minHeight: 100 }}>
+          <SignOut sx={{ width: "100%", color: "text.primary" }} />
         </Box>
       </Box>
     </Popover>

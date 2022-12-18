@@ -1,11 +1,18 @@
-import { Avatar, Button, Typography } from "@mui/material";
+import { Avatar, Button, Typography, SxProps } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
-import { useState } from "react";
+import { FC, useState } from "react";
+import useTheme from "../../../../../../../util/hooks/useTheme";
+import ThemeButton from "../../../../../../ThemeProvider/ThemeBtn/ThemeBtn";
 import ConfirmLogOut from "../Atoms/ConfirmLogOut";
 
-const SignIn = () => {
+interface SignOutProps {
+  sx?: SxProps;
+}
+
+const SignOut: FC<SignOutProps> = ({ sx }) => {
   const [close, setClose] = useState<boolean>(false);
+  const theme = useTheme();
 
   const handleLogOut = () => {
     setClose(!close);
@@ -18,6 +25,7 @@ const SignIn = () => {
           width: 150,
           minHeight: 100,
           p: 2,
+          ...sx,
         }}
       >
         <Link href="/profile">
@@ -33,7 +41,7 @@ const SignIn = () => {
             <Avatar />
             <Typography
               sx={{
-                color: "black",
+                color: theme.palette.text.primary,
                 ml: 1,
                 "&:hover": {
                   textDecoration: "underline",
@@ -58,6 +66,9 @@ const SignIn = () => {
           >
             Podras volver a iniciar sesion cuando quieras.
           </Typography>
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+            <ThemeButton />
+          </Box>
         </Box>
       </Box>
       <ConfirmLogOut open={close} onClose={handleLogOut} />
@@ -65,4 +76,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignOut;

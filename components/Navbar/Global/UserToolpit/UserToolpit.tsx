@@ -29,9 +29,6 @@ interface IMenuToolpitProps {
   open?: boolean;
   sx?: SxProps;
   iconDistance?: string | number;
-  icon?: boolean;
-  underline?: boolean;
-  placement?: "right-start";
 }
 
 const MenuToolpit: FC<IMenuToolpitProps> = ({
@@ -40,8 +37,6 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
   open: defaultOpen,
   sx,
   iconDistance,
-  icon,
-  placement,
 }) => {
   const [open, setOpen] = useState<boolean>(defaultOpen as boolean);
 
@@ -54,7 +49,6 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
         setOpen(false);
       }}
       title={children}
-      placement={placement ? placement : "bottom-start"}
     >
       <Box
         sx={{
@@ -63,43 +57,33 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
           alignItems: "center",
           justifyContent: "center",
           color: "custom.navbartext",
-          borderBottom: open
-            ? "solid #1500a1 3.5px"
-            : "solid transparent 3.5px",
-          textAlign: "center",
           ...sx,
-          px: 1.5,
-          py: 1.5,
         }}
       >
         <Typography
           sx={{
-            fontWeight: 300,
+            fontWeight: 700,
             alignItems: "center",
             transition: "all .2s linear",
             lineHeight: 1,
             color: "inherit",
             mr: iconDistance ? iconDistance : 2.8,
             fontSize: "0.9rem",
-            textTransform: "inherit",
-            textAlign: "inherit",
-            m: 0,
+            textTransform: "uppercase",
           }}
           component="span"
         >
           {name}
         </Typography>
-        {icon && (
-          <ExpandMoreIcon
-            className="icon__expand-more"
-            sx={{
-              opacity: open ? "100%" : "100%",
-              transition: "all .2s linear",
-              transform: open ? "translateY(3px)" : "translateY(0px)",
-              color: "custom.navbartext",
-            }}
-          />
-        )}
+        <ExpandMoreIcon
+          className="icon__expand-more"
+          sx={{
+            opacity: open ? "100%" : "100%",
+            transition: "all .2s linear",
+            transform: open ? "translateY(3px)" : "translateY(0px)",
+            color: "custom.navbartext",
+          }}
+        />
       </Box>
     </LightTooltip>
   );

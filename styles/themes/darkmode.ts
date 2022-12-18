@@ -1,5 +1,3 @@
-import BaseTheme from "./baseTheme";
-
 const darkThemeOption = {
   palette: {
     mode: "dark",
@@ -33,12 +31,12 @@ const darkThemeOption = {
       primary: "#ffffff",
     },
     background: {
-      default: "#000",
-      paper: "#111",
+      default: "#11113f",
+      paper: "#1a1a54",
     },
     custom: {
-      navbar: "#000000",
-      footer: "#1500a1",
+      navbar: "#0a004f",
+      footer: "#0a004f",
     },
   },
 
@@ -78,7 +76,6 @@ const darkThemeOption = {
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
-          borderRadius: "12px",
           backgroundColor: "#111",
           backgroundImage: "none",
         },

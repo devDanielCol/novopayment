@@ -30,7 +30,7 @@ const lightThemeOption = {
       black: "#000000",
     },
     text: {
-      primary: "#000",
+      primary: "#000000",
     },
     background: {
       default: "#f4f6f9",
@@ -77,7 +77,6 @@ const lightThemeOption = {
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
-          borderRadius: "12px",
           backgroundColor: "#fff",
           backgroundImage: "none",
           boxShadow:

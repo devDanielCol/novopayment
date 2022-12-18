@@ -38,6 +38,7 @@ const NavbarPrimaryDeskop: FC<NavbarDeskopProps> = (props) => {
   return (
     <>
       <AppBar
+        position="sticky"
         sx={{
           width: "100%",
           boxShadow: 0,

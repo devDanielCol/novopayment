@@ -1,0 +1,88 @@
+A continuacion la explicación a la respuesta de la prueba.
+
+INTRODUCCIÓN
+
+Para el desarrollo de los componentes logicos utilice typescript.
+Marco de desarrollo Next usando react 18 y algunos hooks basicos.
+
+LIBRERIAS
+
+Librerias adiciones UI: MUI
+Librerias Global Context: ReduxToolkit
+Librerias HttpRequest: axios
+LocalStorage: cryptoJs
+
+Helpers personalizados:
+    normalizeStr -> se uso para aplicar una expresion regular y eliminar caracteres especiales
+
+Hooks personalizados:
+    useTheme
+
+Total de rutas creadas: 1
+Apis creadas: 0
+
+METODOLOGIA ("Patron de diseño")
+Atomic Design
+
+RESPUESTA
+
+Analice muy bien el problema y llegue a la conclución que para generar esa automatización a la hora
+de crear menus anidados, debia tener en cuenta el rendimiento del algoritmo generador de los menus
+y tambien la estructura de datos del JSON,
+la cual maneja una congruencia o patron que incluye objetos multi dimencionales, de diferente tipo
+array y object(typo diccionario).
+
+Dividi el diseño de la interface en atomos y moleculas, cada componente y microcomponente
+juega un papel importante a la hora de ejecutar el algoritmo.
+
+inicialmente pense en la forma en la que deberia recorrer esos datos, y me parecio muy similiar
+a una estructura de datos de tipo circular con nodos interconectados.
+Debido a que la profundidad de la estructura es N = <= infinito>, no podia usar un patron de bucles
+asi que recurri a la recursividad.
+
+
+¿Como lo resolví en 2 pasos?
+
+Primer paso componente NavbarSecondaryDeskop
+
+El componente de la ruta components/Navbar/Secondary/NavbarDeskop/Molecules/NavbarSecondaryDeskop.tsx
+
+Recorre incialmente la primera dimecion del objeto, y se renderiza un div con una ul de li para cada uno de los key.
+cada elemento del array de objectos list se transforma en un array usando Object.entries.
+Luego se llama al compoente MenuToolpit el cual se encarga de mostrar el menu cuando se hace hover
+despues se renderiza inicialmente OptionNavbarSecondary.
+
+Segundo paso componente OptionNavbarSecondary
+
+El componente de la ruta components/Navbar/Secondary/NavbarDeskop/Atoms/OptionNavbarSecondary.tsx
+
+Este componente es el más importante, pues se encarga de renderizar de forma dinamica 
+cada vez que se le da click a un item del menu anidado.
+Es decir, en la carga inicial del dom, ningun submenu se renderiza (Esto no va añadir carga
+al renderizado inicial de la web)
+Cada menu anidado se renderiza cada vez que el usuario interactua, o en otras palabras,
+se renderiza cada vez que el usuario le da click al item.
+
+El compoente valida que hayan elementos en el array y que esos elementos sean correctos
+es decir que cada elemento cuente con algo dentro.
+
+Si el elemento tiene un array de longitud >0 quiere decir que tiene mas datos dentro,
+entonces aquí viene la parte recursiva:
+
+Cuando el array de datos es > 0 se auto llama el compoente y se renderiza cada elemento, y ya cuando el array de datos es <= 0 
+el bucle se detiene. (en un tiempo de respuesta muy bajo).
+
+Adicional a esto le puse la version responsive.
+
+Los demas componentes diferentes a los mensionados, solo son para estilizar, maquetado
+y las navbar de las versiones deskop y mobile.
+
+Los componentes que tienen toda la logica realmente importante son 
+
+components/Navbar/Secondary/NavbarDeskop/Atoms/OptionNavbarSecondary.tsx
+components/Navbar/Secondary/NavbarDeskop/Molecules/NavbarSecondaryDeskop.tsx
+
+Si la explicacion tal vez no fue tan clara, puedes mirar los comentarios que deje en cada componente.
+
+Espero les halla gustado mi solución, muchas gracias me parecio muy interesante el ejercicio.
+Muchas gracias, quedo muy atento

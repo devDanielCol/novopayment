@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { ReactNode } from "react";
 
 interface IBodyDocumentProps {
@@ -7,9 +7,9 @@ interface IBodyDocumentProps {
 
 const BodyDocument = ({ children }: IBodyDocumentProps) => {
   return (
-    <Container maxWidth="xl" component="main">
+    <Box component="main" sx={{ p: 0 }}>
       {children}
-    </Container>
+    </Box>
   );
 };
 

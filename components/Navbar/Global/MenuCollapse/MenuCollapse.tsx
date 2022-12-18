@@ -1,61 +1,28 @@
-import {
-  Tooltip,
-  tooltipClasses,
-  TooltipProps,
-  Typography,
-  Box,
-  SxProps,
-} from "@mui/material";
+import { Typography, Box, SxProps, Collapse } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import styled from "@emotion/styled";
 import { FC, ReactNode, useState } from "react";
 
-const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(() => ({
-  [`& .${tooltipClasses.arrow}`]: {
-    color: "transparent",
-  },
-  [`& .${tooltipClasses.tooltip}`]: {
-    maxWidth: "100%",
-    padding: 0,
-    margin: 0,
-  },
-}));
-
-interface IMenuToolpitProps {
+interface MenuCollapseProps {
   name: string;
   children: ReactNode;
   open?: boolean;
   sx?: SxProps;
   iconDistance?: string | number;
   icon?: boolean;
-  underline?: boolean;
-  placement?: "right-start";
 }
 
-const MenuToolpit: FC<IMenuToolpitProps> = ({
+const MenuCollapse: FC<MenuCollapseProps> = ({
   name,
   children,
   open: defaultOpen,
   sx,
   iconDistance,
   icon,
-  placement,
 }) => {
   const [open, setOpen] = useState<boolean>(defaultOpen as boolean);
 
   return (
-    <LightTooltip
-      onOpen={() => {
-        setOpen(true);
-      }}
-      onClose={() => {
-        setOpen(false);
-      }}
-      title={children}
-      placement={placement ? placement : "bottom-start"}
-    >
+    <Box>
       <Box
         sx={{
           display: "flex",
@@ -63,9 +30,6 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
           alignItems: "center",
           justifyContent: "center",
           color: "custom.navbartext",
-          borderBottom: open
-            ? "solid #1500a1 3.5px"
-            : "solid transparent 3.5px",
           textAlign: "center",
           ...sx,
           px: 1.5,
@@ -73,6 +37,9 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
         }}
       >
         <Typography
+          onClick={() => {
+            setOpen(!open);
+          }}
           sx={{
             fontWeight: 300,
             alignItems: "center",
@@ -101,8 +68,11 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
           />
         )}
       </Box>
-    </LightTooltip>
+      <Collapse in={open} sx={{ p: 1 }}>
+        {children}
+      </Collapse>
+    </Box>
   );
 };
 
-export default MenuToolpit;
+export default MenuCollapse;

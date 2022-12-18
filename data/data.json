@@ -2,11 +2,252 @@
     "lista": [
         {
             "card_list": [],
-            "pays_transfer": [
+            "custom_data": [
                 {
                     "between_cards": [],
                     "banks": [],
-                    "credit_card": []
+                    "este deberia": [
+                        {
+                            "pays_transfer": [
+                                {
+                                    "between_cards": [],
+                                    "banks": [],
+                                    "credit_card": []
+                                }
+                            ],
+                            "support": [
+                                {
+                                    "lock": [],
+                                    "change_pass": []
+                                }
+                            ],
+                            "enterprises": [
+                                {}
+                            ],
+                            "card_list": []
+                        },
+                        {
+                            "pays_transfer": [
+                                {
+                                    "between_cards": [
+                                        {
+                                            "pays_transfer": [
+                                                {
+                                                    "between_cards": [
+                                                        {
+                                                            "pays_transfer": [
+                                                                {
+                                                                    "between_cards": [],
+                                                                    "banks": [],
+                                                                    "credit_card": []
+                                                                }
+                                                            ],
+                                                            "support": [
+                                                                {
+                                                                    "lock": [],
+                                                                    "change_pass": []
+                                                                }
+                                                            ],
+                                                            "enterprises": [
+                                                                {}
+                                                            ],
+                                                            "card_list": [
+                                                                {
+                                                                    "pays_transfer": [
+                                                                        {
+                                                                            "between_cards": [],
+                                                                            "banks": [],
+                                                                            "credit_card": []
+                                                                        }
+                                                                    ],
+                                                                    "support": [
+                                                                        {
+                                                                            "lock": [],
+                                                                            "change_pass": []
+                                                                        }
+                                                                    ],
+                                                                    "enterprises": [
+                                                                        {}
+                                                                    ],
+                                                                    "card_list": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "banks": [],
+                                                    "credit_card": []
+                                                }
+                                            ],
+                                            "support": [
+                                                {
+                                                    "lock": [],
+                                                    "change_pass": []
+                                                }
+                                            ],
+                                            "enterprises": [
+                                                {}
+                                            ],
+                                            "card_list": []
+                                        }
+                                    ],
+                                    "banks": [],
+                                    "credit_card": []
+                                }
+                            ],
+                            "support": [
+                                {
+                                    "lock": [],
+                                    "change_pass": []
+                                }
+                            ],
+                            "enterprises": [
+                                {}
+                            ],
+                            "card_list": []
+                        },
+                        {
+                            "pays_transfer": [
+                                {
+                                    "between_cards": [],
+                                    "banks": [],
+                                    "credit_card": []
+                                }
+                            ],
+                            "support": [
+                                {
+                                    "lock": [],
+                                    "change_pass": []
+                                }
+                            ],
+                            "enterprises": [
+                                {}
+                            ],
+                            "card_list": []
+                        }
+                    ]
+                },
+                {
+                    "between_cards": [],
+                    "banks": [],
+                    "este deberia": [
+                        {
+                            "pays_transfer": [
+                                {
+                                    "between_cards": [],
+                                    "banks": [],
+                                    "credit_card": []
+                                }
+                            ],
+                            "support": [
+                                {
+                                    "lock": [],
+                                    "change_pass": []
+                                }
+                            ],
+                            "enterprises": [
+                                {}
+                            ],
+                            "card_list": []
+                        },
+                        {
+                            "pays_transfer": [
+                                {
+                                    "between_cards": [
+                                        {
+                                            "pays_transfer": [
+                                                {
+                                                    "between_cards": [
+                                                        {
+                                                            "pays_transfer": [
+                                                                {
+                                                                    "between_cards": [],
+                                                                    "banks": [],
+                                                                    "credit_card": []
+                                                                }
+                                                            ],
+                                                            "support": [
+                                                                {
+                                                                    "lock": [],
+                                                                    "change_pass": []
+                                                                }
+                                                            ],
+                                                            "enterprises": [
+                                                                {}
+                                                            ],
+                                                            "card_list": [
+                                                                {
+                                                                    "pays_transfer": [
+                                                                        {
+                                                                            "between_cards": [],
+                                                                            "banks": [],
+                                                                            "credit_card": []
+                                                                        }
+                                                                    ],
+                                                                    "support": [
+                                                                        {
+                                                                            "lock": [],
+                                                                            "change_pass": []
+                                                                        }
+                                                                    ],
+                                                                    "enterprises": [
+                                                                        {}
+                                                                    ],
+                                                                    "card_list": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "banks": [],
+                                                    "credit_card": []
+                                                }
+                                            ],
+                                            "support": [
+                                                {
+                                                    "lock": [],
+                                                    "change_pass": []
+                                                }
+                                            ],
+                                            "enterprises": [
+                                                {}
+                                            ],
+                                            "card_list": []
+                                        }
+                                    ],
+                                    "banks": [],
+                                    "credit_card": []
+                                }
+                            ],
+                            "support": [
+                                {
+                                    "lock": [],
+                                    "change_pass": []
+                                }
+                            ],
+                            "enterprises": [
+                                {}
+                            ],
+                            "card_list": []
+                        },
+                        {
+                            "pays_transfer": [
+                                {
+                                    "between_cards": [],
+                                    "banks": [],
+                                    "credit_card": []
+                                }
+                            ],
+                            "support": [
+                                {
+                                    "lock": [],
+                                    "change_pass": []
+                                }
+                            ],
+                            "enterprises": [
+                                {}
+                            ],
+                            "card_list": []
+                        }
+                    ]
                 }
             ],
             "support": [

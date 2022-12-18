@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Box, Typography } from "@mui/material";
 import Link from "next/link";
 import SignOut from "../Atoms/SignOut/Molecules/SignOut";
-import MenuToolpit from "../../../Global/MenuToolpit/MenuToolpit";
+import MenuToolpit from "../../../Global/UserToolpit/UserToolpit";
 import MouseMoveContent from "../../../../UiEvents/MouseMoveCard";
 
 const NavbarPrimaryDeskop = () => {
@@ -43,11 +43,9 @@ const NavbarPrimaryDeskop = () => {
               justifyContent: "flex-end",
             }}
           >
-            <MenuToolpit
-              element={<SignOut />}
-              name="User name"
-              sx={{ mr: 7 }}
-            />
+            <MenuToolpit name="User name" sx={{ mr: 7 }}>
+              <SignOut sx={{ color: "primary" }} />
+            </MenuToolpit>
           </Box>
         </Toolbar>
       </AppBar>
